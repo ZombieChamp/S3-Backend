@@ -135,6 +135,4 @@ Module is maintained by [Matthew Mawson](https://github.com/ZombieChamp)
 
 ## License
 
-TODO: Link to licence file
-
-Apache 2 Licensed. See [LICENSE](https://github.com/ZombieChamp/S3-Backend/blob/development/LICENCE) for full details.
+GNU General Public Licensed. See [LICENSE](https://github.com/ZombieChamp/S3-Backend/blob/development/LICENCE) for full details.
