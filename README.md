@@ -24,7 +24,7 @@ The following features of the DynamoDB table are available:
 
 ```hcl
 module "s3_backend" {
-  source = "/home/mmawson/Terraform Modules/S3 Backend"
+  source = "git@github.com:ZombieChamp/S3-Backend.git"
 
   s3_bucket = {
     name = "bestproject-terraform-backend"
@@ -36,7 +36,7 @@ module "s3_backend" {
 
 ```hcl
 module "s3_backend" {
-  source = "/home/mmawson/Terraform Modules/S3 Backend"
+  source = "git@github.com:ZombieChamp/S3-Backend.git"
 
   s3_bucket = {
     name = "bestproject-terraform-backend"
@@ -57,7 +57,7 @@ data "aws_s3_bucket" "log_bucket" {
 
 
 module "s3_backend" {
-  source = "/home/mmawson/Terraform Modules/S3 Backend"
+  source = "git@github.com:ZombieChamp/S3-Backend.git"
 
   s3_bucket = {
     name           = "bestproject-terraform-backend"
@@ -137,4 +137,4 @@ Module is maintained by [Matthew Mawson](https://github.com/ZombieChamp)
 
 TODO: Link to licence file
 
-Apache 2 Licensed. See [LICENSE](https://link/to/licence) for full details.
+Apache 2 Licensed. See [LICENSE](https://github.com/ZombieChamp/S3-Backend/blob/development/LICENCE) for full details.
