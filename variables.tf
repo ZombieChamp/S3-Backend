@@ -39,12 +39,12 @@ variable "s3_bucket" {
 
   validation {
     condition     = !endswith(var.s3_bucket["name"], "-s3alias")
-    error_message = "Bucket names must not end with the suffix -s3alias. This suffix is reserved for access point alias names. For more information, see Using a bucket-style alias for your S3 bucket access point."
+    error_message = "Bucket names must not end with the suffix -s3alias. This suffix is reserved for access point alias names. For more information, see Using a bucket-style alias for your S3 bucket access point (https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-alias.html)."
   }
 
   validation {
     condition     = !endswith(var.s3_bucket["name"], "--ol-s3")
-    error_message = "Bucket names must not end with the suffix --ol-s3. This suffix is reserved for Object Lambda Access Point alias names. For more information, see How to use a bucket-style alias for your S3 bucket Object Lambda Access Point."
+    error_message = "Bucket names must not end with the suffix --ol-s3. This suffix is reserved for Object Lambda Access Point alias names. For more information, see How to use a bucket-style alias for your S3 bucket Object Lambda Access Point (https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-use.html#ol-access-points-alias)."
   }
 }
 
