@@ -105,14 +105,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_s3_bucket.this]() | resource |
-| [aws_s3_bucket_server_side_encryption_configuration.this]() | resource |
-| [aws_s3_bucket_public_access_block.this]() | resource |
-| [aws_s3_bucket_versioning.this]() | resource |
-| [aws_s3_bucket_logging.this]() | resource |
-| [aws_iam_policy_document.deny_unsecure_communications]() | data source |
-| [aws_region.this]() | data source |
-| [aws_dynamodb_table.this]() | resource |
+| [aws_s3_bucket.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
+| [aws_s3_bucket_server_side_encryption_configuration.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
+| [aws_s3_bucket_public_access_block.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
+| [aws_s3_bucket_versioning.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning) | resource |
+| [aws_s3_bucket_logging.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_logging) | resource |
+| [aws_iam_policy_document.deny_unsecure_communications](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_region.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
+| [aws_dynamodb_table.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table) | resource |
 
 ## Inputs
 
