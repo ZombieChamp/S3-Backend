@@ -123,11 +123,17 @@ TODO: Add Inputs
 
 ## Outputs
 
-TODO: Add Outputs
-
 | Name | Description |
 |------|-------------|
-
+| [s3_bucket_id]() | The name of the bucket. |
+| [s3_bucket_arn]() | The ARN of the bucket. Will be of format arn:aws:s3:::bucketname. |
+| [s3_bucket_bucket_domain_name]() | The bucket domain name. Will be of format bucketname.s3.amazonaws.com. |
+| [s3_bucket_bucket_regional_domain_name]() | The bucket region-specific domain name. The bucket domain name including the region name. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent redirect issues from CloudFront to S3 Origin URL. |
+| [s3_bucket_hosted_zone_id]() | The Route 53 Hosted Zone ID for this bucket's region. |
+| [s3_bucket_region]() | The AWS region this bucket resides in. |
+| [dynamodb_table_arn]() | The ARN of the table. |
+| [dynamodb_table_id]() | The name of the table. |
+| [dynamodb_table_replica_arns]() | The ARN(s) of the replica(s). |
 
 ## Authors
 
