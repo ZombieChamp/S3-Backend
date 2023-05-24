@@ -22,7 +22,15 @@ variable "s3_bucket" {
     error_message = "Bucket names must begin and end with a letter or number."
   }
 
-  # TODO: Add validation for "Bucket names must not contain two adjacent periods."
+  validation {
+    condition     = !can(regex(".*[.][.].*", var.s3_bucket["name"]))
+    error_message = "Bucket names must not contain two adjacent periods."
+  }
+
+  validation {
+    condition     = !can(cidrnetmask("${var.s3_bucket["name"]}/32"))
+    error_message = "Bucket names must not be formatted as an IP address (for example, 192.168.5.4)."
+  }
 
   validation {
     condition     = !startswith(var.s3_bucket["name"], "xn--")
