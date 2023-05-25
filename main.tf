@@ -73,9 +73,9 @@ data "aws_iam_policy_document" "deny_unsecure_communications" {
   }
 }
 
-# Used to validate var.dynamodb_table["replica_regions"] region entries
+# Used to validate var.dynamodb_table["replica_region_names"] region entries
 data "aws_region" "this" {
-  for_each = toset(var.dynamodb_table["replica_regions"])
+  for_each = toset(var.dynamodb_table["replica_region_names"])
 
   name = each.key
 }
@@ -106,7 +106,7 @@ resource "aws_dynamodb_table" "this" {
   }
 
   dynamic "replica" {
-    for_each = toset(var.dynamodb_table["replica_regions"])
+    for_each = toset(var.dynamodb_table["replica_region_names"])
 
     content {
       region_name = replica.key

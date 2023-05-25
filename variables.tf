@@ -52,7 +52,7 @@ variable "dynamodb_table" {
   type = object({
     name                   = optional(string, null)
     point_in_time_recovery = optional(bool, false)
-    replica_regions        = optional(list(string), [])
+    replica_region_names   = optional(list(string), [])
   })
 
   default = {}

@@ -68,7 +68,7 @@ module "s3_backend" {
   dynamodb_table = {
     name = "terraform-state-lock"
     point_in_time_recovery = true
-    replica_regions = [
+    replica_region_names = [
       "eu-west-2",
       "us-west-1",
     ]
