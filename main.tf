@@ -36,10 +36,10 @@ resource "aws_s3_bucket_versioning" "this" {
 }
 
 resource "aws_s3_bucket_logging" "this" {
-  count = var.s3_bucket["logging_bucket"] == null ? 0 : 1
+  count = var.s3_bucket["logging_bucket_id"] == null ? 0 : 1
 
   bucket        = aws_s3_bucket.this.id
-  target_bucket = var.s3_bucket["logging_bucket"]
+  target_bucket = var.s3_bucket["logging_bucket_id"]
   target_prefix = "${aws_s3_bucket.this.id}/"
 }
 

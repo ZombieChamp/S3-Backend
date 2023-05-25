@@ -1,8 +1,8 @@
 variable "s3_bucket" {
   type = object({
-    name           = string
-    versioning     = optional(bool, false)
-    logging_bucket = optional(string, null)
+    name              = string
+    versioning        = optional(bool, false)
+    logging_bucket_id = optional(string, null)
   })
 
   description = "The S3 Bucket containing the Terraform State."
