@@ -41,7 +41,7 @@ module "s3_backend" {
   s3_bucket = {
     name = "bestproject-terraform-backend"
   }
-  
+
   dynamodb_table = {
     name = "terraform-state-lock"
   }
@@ -64,9 +64,9 @@ module "s3_backend" {
     versioning     = true
     logging_bucket = data.aws_s3_bucket.log_bucket.id
   }
-  
+
   dynamodb_table = {
-    name = "terraform-state-lock"
+    name                   = "terraform-state-lock"
     point_in_time_recovery = true
     replica_region_names = [
       "eu-west-2",
